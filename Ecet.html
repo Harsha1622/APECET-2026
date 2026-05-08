@@ -15,24 +15,20 @@
 }
 
 body{
-    background:#e9e9f3;
+    background:#ececf5;
 }
 
-/* ACCESSIBILITY BAR */
+/* TOP BAR */
 
-.top-access{
-    background:#5d2d91;
-    color:white;
+.top-bar{
     height:24px;
+    background:#6b2fa1;
+    color:white;
     display:flex;
     align-items:center;
     gap:10px;
     padding-left:10px;
     font-size:12px;
-}
-
-.top-access span{
-    cursor:pointer;
 }
 
 .black-box{
@@ -50,8 +46,8 @@ body{
 /* HEADER */
 
 .header{
-    background:linear-gradient(to right,#6a1b9a,#7b1fa2,#8e24aa);
     height:95px;
+    background:linear-gradient(to right,#6b2fa1,#7b35b2,#6b2fa1);
     position:relative;
     color:white;
     text-align:center;
@@ -61,13 +57,13 @@ body{
 }
 
 .header h1{
-    font-size:24px;
+    font-size:22px;
     font-weight:bold;
 }
 
 .header h2{
-    font-size:16px;
-    margin-top:3px;
+    font-size:15px;
+    margin-top:2px;
 }
 
 .header p{
@@ -108,7 +104,7 @@ body{
 
 .strip{
     height:34px;
-    background:#4f1979;
+    background:#4d1c78;
 }
 
 /* MAIN BOX */
@@ -119,10 +115,9 @@ body{
 
 .main-box{
     background:white;
+    border:1px solid #cfcfcf;
     border-radius:4px;
-    border:1px solid #c9c9c9;
     overflow:hidden;
-    box-shadow:0 1px 2px rgba(0,0,0,0.15);
 }
 
 /* NOTE */
@@ -130,8 +125,8 @@ body{
 .note{
     padding:10px;
     font-size:14px;
-    line-height:1.5;
     border-bottom:1px solid #ddd;
+    line-height:1.5;
 }
 
 .note b{
@@ -144,13 +139,13 @@ body{
     background:#6b2fa1;
     color:white;
     padding:10px;
-    font-size:16px;
     font-weight:bold;
+    font-size:16px;
 }
 
 /* FORM */
 
-.form-section{
+.form-area{
     padding:18px;
 }
 
@@ -175,27 +170,19 @@ body{
 .form-group input{
     width:100%;
     height:42px;
-    border:1px solid #d5d5d5;
+    border:1px solid #d7d7d7;
     border-radius:4px;
     padding:10px;
-    font-size:14px;
     background:#f8fbfc;
 }
 
-.form-group input:focus{
-    outline:none;
-    border-color:#6b2fa1;
-}
-
-/* BUTTON */
-
-.btn-area{
+.button-area{
     text-align:center;
     margin-top:18px;
 }
 
 .btn{
-    background:#1f8a55;
+    background:#17854d;
     color:white;
     border:none;
     padding:10px 24px;
@@ -206,7 +193,7 @@ body{
 }
 
 .btn:hover{
-    background:#146b40;
+    background:#0f6b3c;
 }
 
 /* FOOTER */
@@ -215,18 +202,13 @@ body{
     position:fixed;
     bottom:0;
     width:100%;
-    background:#6a2c91;
+    background:#6b2fa1;
     color:white;
+    padding:10px 14px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:10px 14px;
     font-size:13px;
-}
-
-.footer img{
-    height:22px;
-    vertical-align:middle;
 }
 
 /* RESPONSIVE */
@@ -237,18 +219,6 @@ body{
         height:110px;
     }
 
-    .header h1{
-        font-size:20px;
-    }
-
-    .header h2{
-        font-size:14px;
-    }
-
-    .header p{
-        font-size:11px;
-    }
-
     .logo-left,
     .logo-right{
         width:50px;
@@ -256,12 +226,23 @@ body{
         top:18px;
     }
 
+    .header h1{
+        font-size:20px;
+    }
+
+    .header h2{
+        font-size:13px;
+    }
+
+    .header p{
+        font-size:11px;
+    }
+
     .footer{
         flex-direction:column;
         gap:5px;
         text-align:center;
     }
-
 }
 
 </style>
@@ -269,9 +250,9 @@ body{
 
 <body>
 
-<!-- ACCESSIBILITY -->
+<!-- ACCESSIBILITY BAR -->
 
-<div class="top-access">
+<div class="top-bar">
     <span>A-</span>
     <span>A</span>
     <span>A+</span>
@@ -286,12 +267,14 @@ body{
 
 <div class="header">
 
+    <!-- LEFT LOGO -->
     <div class="logo-left">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Andhra_Pradesh_State_Council_of_Higher_Education_logo.png/220px-Andhra_Pradesh_State_Council_of_Higher_Education_logo.png">
+        <img src="jntua-logo.png" alt="JNTUA Logo">
     </div>
 
+    <!-- RIGHT LOGO -->
     <div class="logo-right">
-        <img src="https://upload.wikimedia.org/wikipedia/en/8/86/JNTU_Anantapur_Logo.png">
+        <img src="apsche-logo.png" alt="APSCHE Logo">
     </div>
 
     <h1>AP ECET - 2026</h1>
@@ -304,7 +287,7 @@ body{
 
 <div class="strip"></div>
 
-<!-- MAIN -->
+<!-- MAIN CONTENT -->
 
 <div class="container">
 
@@ -321,26 +304,34 @@ body{
             Student Response Sheet for AP ECET - 2026
         </div>
 
-        <div class="form-section">
+        <div class="form-area">
 
             <div class="form-row">
 
                 <div class="form-group">
-                    <label>Registration Number <span style="color:red;">*</span></label>
+                    <label>
+                        Registration Number
+                        <span style="color:red;">*</span>
+                    </label>
 
                     <input type="text" placeholder="Enter Registration Number">
                 </div>
 
                 <div class="form-group">
-                    <label>ECET Hallticket No <span style="color:red;">*</span></label>
+                    <label>
+                        ECET Hallticket No
+                        <span style="color:red;">*</span>
+                    </label>
 
                     <input type="text" placeholder="Enter ECET Hallticket No">
                 </div>
 
             </div>
 
-            <div class="btn-area">
-                <button class="btn">Get Key Details</button>
+            <div class="button-area">
+                <button class="btn">
+                    Get Key Details
+                </button>
             </div>
 
         </div>
@@ -358,8 +349,7 @@ body{
     </div>
 
     <div>
-        Designed & Developed By
-        <img src="https://aponline.gov.in/apportal/images/aponline-logo.png">
+        Designed & Developed By APOnline
     </div>
 
 </div>
